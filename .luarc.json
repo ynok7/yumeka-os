@@ -1,0 +1,10 @@
+{
+    "diagnostics.globals": [
+        "vim"
+    ],
+    "diagnostics.disable": [
+        "undefined-global",
+        "trailing-space"
+    ],
+    "runtime.unicodeName": true
+}
