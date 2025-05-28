@@ -38,6 +38,10 @@ return {
 
 	    dashboard.section.header.val = vim.split(art, "\n")
 
+	    dashboard.section.buttons.val = {
+		    dashboard.button("<leader>e", "> File Explorer", "<CMD>Neotree toggle<CR>")
+	    }
+
 	    alpha.setup(dashboard.opts)
 	end,
     },
