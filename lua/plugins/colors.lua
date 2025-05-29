@@ -1,13 +1,14 @@
-local function enable_transparency()
-    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-end
-
 return {
     {
 	"folke/tokyonight.nvim",
 	config = function()
+	    require("tokyonight").setup({
+		transparent = true,
+		styles = {
+		    floats = "dark"
+		}
+	    })
 	    vim.cmd.colorscheme("tokyonight")
-	    enable_transparency()
 	end,
     },
     {
@@ -18,31 +19,5 @@ return {
 	opts = {
 	    theme = "tokyonight",
 	},
-    },
-    {
-	"goolord/alpha-nvim",
-	config = function()
-	    local alpha = require("alpha")
-	    local dashboard = require("alpha.themes.dashboard")
-
-	    local art = [[
-
-██╗   ██╗    ██╗   ██╗    ███╗   ███╗    ███████╗    ██╗  ██╗     █████╗ 
-╚██╗ ██╔╝    ██║   ██║    ████╗ ████║    ██╔════╝    ██║ ██╔╝    ██╔══██╗
- ╚████╔╝     ██║   ██║    ██╔████╔██║    █████╗      █████╔╝     ███████║
-  ╚██╔╝      ██║   ██║    ██║╚██╔╝██║    ██╔══╝      ██╔═██╗     ██╔══██║
-   ██║       ╚██████╔╝    ██║ ╚═╝ ██║    ███████╗    ██║  ██╗    ██║  ██║
-   ╚═╝        ╚═════╝     ╚═╝     ╚═╝    ╚══════╝    ╚═╝  ╚═╝    ╚═╝  ╚═╝
-
-	    ]]
-
-	    dashboard.section.header.val = vim.split(art, "\n")
-
-	    dashboard.section.buttons.val = {
-		    dashboard.button("<leader>e", "> File Explorer", "<CMD>Neotree toggle<CR>")
-	    }
-
-	    alpha.setup(dashboard.opts)
-	end,
     },
 }
