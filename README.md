@@ -2,8 +2,11 @@
 
 ### Keybinds
 
-| Keybinds | Description         |
-|----------|---------------------|
-|<leader>e | Opens file explorer |
+| Keybind    | Description         |
+|------------|---------------------|
+| leader + e | File Explorer       |
+| leader + e | Telescope           |
+| leader + e | Find Grep           |
+| leader + e | Quit Neovim         |
 
 
