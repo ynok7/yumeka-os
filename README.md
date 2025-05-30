@@ -1,2 +1,9 @@
-# yumeka-os
-# yumeka-os
+# YumekaOS
+
+### Keybinds
+
+| Keybinds | Description         |
+|----------|---------------------|
+|<leader>e | Opens file explorer |
+
+
